@@ -1,0 +1,244 @@
+<!DOCTYPE html> <html lang="en" class="scroll-smooth"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <base href="https://shez4n.github.io/tailwind-ui-project/" /> <script src="https://cdn.tailwindcss.com"></script> <title>Tailwind UI Projects Website</title> <style> pre { color: #000; counter-reset: line; background-color: #fffffa; overflow: auto; padding: 0 1em; } code { line-height: 100%; counter-increment: line; background-color: rgb(255, 255, 255); padding: 0.2em; letter-spacing: -0.05em; word-break: normal; border-radius: 5px; } code:before { content: counter(line); padding-right: 1rem; } code:before { --webkit-user-select: none; } pre code { border: none; background: none; line-height: 1em; letter-spacing: normal; word-break: break-all; } #custom__alert { text-align: center; display: none; } #custom__alert p { width: 30%; } </style> </head> <body class="bg-gradient-to-r from-teal-500 via-cyan-500 to-sky-500"> <nav class="bg-gray-800"> <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8"> <div class="relative flex h-16 items-center justify-between"> <div class="absolute inset-y-0 left-0 flex items-center sm:hidden"> <!-- Mobile menu button--> <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-btn" onclick="myfunc2()" > <span class="sr-only">Open main menu</span> <!-- Icon when menu is closed. Heroicon name: outline/bars-3 Menu open: "hidden", Menu closed: "block" --> <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" > <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /> </svg> <!-- Icon when menu is open. Heroicon name: outline/x-mark Menu open: "block", Menu closed: "hidden" --> <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" > <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /> </svg> </button> </div> <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start" > <div class="flex flex-shrink-0 items-center"> <img class="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" /> <img class="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" /> </div> <div class="hidden sm:ml-6 sm:block"> <div class="flex space-x-4"> <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> <a class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page" href="./" >Home</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="./marketing/index.html" >Marketing</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="./ecommerce/index.html" >Ecommerce</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="./application-ui/index.html" >Application UI</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="./preview-img/index.html" >Preview Images</a > </div> </div> </div> <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0" > <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" > <span class="sr-only">View notifications</span> <!-- Heroicon name: outline/bell --> <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" > <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" /> </svg> </button> <!-- Profile dropdown --> <div class="relative ml-3"> <div> <button type="button" class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true" > <span class="sr-only">Open user menu</span> <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" /> </button> </div> </div> </div> </div> </div> <!-- Mobile menu, show/hide based on menu state. --> <div class="sm:hidden" id="mobile-menu"> <div class="space-y-1 px-2 pt-2 pb-3" id="mobile__menu__list"> <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> <a href="./" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page" >Dashboard</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="./marketing/index.html" >Marketing</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="./ecommerce/index.html" >Ecommerce</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="./application-ui/index.html" >Application UI</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="./preview-img/index.html" >Preview Images</a > </div> </div> </nav> <br /> <div class="fixed top-20 right-0 left-0 flex items-center text-center text-white text-sm font-bold rounded mb-10" role="alert" id="custom__alert" > <p class="px-4 py-3 bg-green-600 mx-auto rounded"></p> </div> <h1 class="text-center text-xl">Main Content</h1> <!-- This example requires Tailwind CSS v2.0+ --> <main id="main_part_of_page" class="container bg-white mx-auto my-20 ring-2 ring-purple-500 ring-offset-4 ring-offset-slate-50 dark:ring-offset-slate-900 p-8" >
+<!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+<div class="fixed z-10 inset-0 overflow-y-auto" role="dialog" aria-modal="true">
+  <div class="flex min-h-screen text-center md:block md:px-2 lg:px-4" style="font-size: 0">
+    <!--
+      Background overlay, show/hide based on modal state.
+
+      Entering: "ease-out duration-300"
+        From: "opacity-0"
+        To: "opacity-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100"
+        To: "opacity-0"
+    -->
+    <div class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity md:block" aria-hidden="true"></div>
+
+    <!-- This element is to trick the browser into centering the modal contents. -->
+    <span class="hidden md:inline-block md:align-middle md:h-screen" aria-hidden="true">&#8203;</span>
+
+    <!--
+      Modal panel, show/hide based on modal state.
+
+      Entering: "ease-out duration-300"
+        From: "opacity-0 translate-y-4 md:translate-y-0 md:scale-95"
+        To: "opacity-100 translate-y-0 md:scale-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100 translate-y-0 md:scale-100"
+        To: "opacity-0 translate-y-4 md:translate-y-0 md:scale-95"
+    -->
+    <div class="flex text-base text-left transform transition w-full md:inline-block md:max-w-2xl md:px-4 md:my-8 md:align-middle lg:max-w-4xl">
+      <div class="w-full relative flex items-center bg-white px-4 pt-14 pb-8 overflow-hidden shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
+        <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-500 sm:top-8 sm:right-6 md:top-6 md:right-6 lg:top-8 lg:right-8">
+          <span class="sr-only">Close</span>
+          <!-- Heroicon name: outline/x -->
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div class="w-full grid grid-cols-1 gap-y-8 gap-x-6 items-start sm:grid-cols-12 lg:items-center lg:gap-x-8">
+          <div class="aspect-w-2 aspect-h-3 rounded-lg bg-gray-100 overflow-hidden sm:col-span-4 lg:col-span-5">
+            <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-featured-product-shot.jpg" alt="Back of women&#039;s Basic Tee in black." class="object-center object-cover">
+          </div>
+          <div class="sm:col-span-8 lg:col-span-7">
+            <h2 class="text-xl font-medium text-gray-900 sm:pr-12">Women&#039;s Basic Tee</h2>
+
+            <section aria-labelledby="information-heading" class="mt-1">
+              <h3 id="information-heading" class="sr-only">Product information</h3>
+
+              <p class="font-medium text-gray-900">$32</p>
+
+              <!-- Reviews -->
+              <div class="mt-4">
+                <h4 class="sr-only">Reviews</h4>
+                <div class="flex items-center">
+                  <p class="text-sm text-gray-700">
+                    3.9
+                    <span class="sr-only"> out of 5 stars</span>
+                  </p>
+                  <div class="ml-1 flex items-center">
+                    <!--
+                      Heroicon name: solid/star
+
+                      Active: "text-yellow-400", Default: "text-gray-200"
+                    -->
+                    <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+
+                    <!-- Heroicon name: solid/star -->
+                    <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+
+                    <!-- Heroicon name: solid/star -->
+                    <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+
+                    <!-- Heroicon name: solid/star -->
+                    <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+
+                    <!-- Heroicon name: solid/star -->
+                    <svg class="text-gray-200 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  </div>
+                  <div class="hidden ml-4 lg:flex lg:items-center">
+                    <span class="text-gray-300" aria-hidden="true">&middot;</span>
+                    <a href="#" class="ml-4 text-sm font-medium text-indigo-600 hover:text-indigo-500">See all 512 reviews</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section aria-labelledby="options-heading" class="mt-8">
+              <h3 id="options-heading" class="sr-only">Product options</h3>
+
+              <form>
+                <!-- Color picker -->
+                <div>
+                  <h4 class="text-sm font-medium text-gray-900">Color</h4>
+
+                  <fieldset class="mt-2">
+                    <legend class="sr-only">Choose a color</legend>
+                    <div class="flex items-center space-x-3">
+                      <!--
+                        Active and Checked: "ring ring-offset-1"
+                        Not Active and Checked: "ring-2"
+                      -->
+                      <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-900">
+                        <input type="radio" name="color-choice" value="Black" class="sr-only" aria-labelledby="color-choice-0-label">
+                        <p id="color-choice-0-label" class="sr-only">Black</p>
+                        <span aria-hidden="true" class="h-8 w-8 bg-gray-900 border border-black border-opacity-10 rounded-full"></span>
+                      </label>
+
+                      <!--
+                        Active and Checked: "ring ring-offset-1"
+                        Not Active and Checked: "ring-2"
+                      -->
+                      <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                        <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-1-label">
+                        <p id="color-choice-1-label" class="sr-only">Heather Grey</p>
+                        <span aria-hidden="true" class="h-8 w-8 bg-gray-400 border border-black border-opacity-10 rounded-full"></span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <!-- Size picker -->
+                <div class="mt-8">
+                  <div class="flex items-center justify-between">
+                    <h4 class="text-sm font-medium text-gray-900">Size</h4>
+                    <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500">Size guide</a>
+                  </div>
+
+                  <fieldset class="mt-2">
+                    <legend class="sr-only">Choose a size</legend>
+                    <div class="grid grid-cols-7 gap-2">
+                      <!--
+                        In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                        Active: "ring-2 ring-offset-2 ring-indigo-500"
+                        Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                      -->
+                      <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1 cursor-pointer focus:outline-none">
+                        <input type="radio" name="size-choice" value="XXS" class="sr-only" aria-labelledby="size-choice-0-label">
+                        <p id="size-choice-0-label">XXS</p>
+                      </label>
+
+                      <!--
+                        In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                        Active: "ring-2 ring-offset-2 ring-indigo-500"
+                        Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                      -->
+                      <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1 cursor-pointer focus:outline-none">
+                        <input type="radio" name="size-choice" value="XS" class="sr-only" aria-labelledby="size-choice-1-label">
+                        <p id="size-choice-1-label">XS</p>
+                      </label>
+
+                      <!--
+                        In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                        Active: "ring-2 ring-offset-2 ring-indigo-500"
+                        Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                      -->
+                      <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1 cursor-pointer focus:outline-none">
+                        <input type="radio" name="size-choice" value="S" class="sr-only" aria-labelledby="size-choice-2-label">
+                        <p id="size-choice-2-label">S</p>
+                      </label>
+
+                      <!--
+                        In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                        Active: "ring-2 ring-offset-2 ring-indigo-500"
+                        Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                      -->
+                      <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1 cursor-pointer focus:outline-none">
+                        <input type="radio" name="size-choice" value="M" class="sr-only" aria-labelledby="size-choice-3-label">
+                        <p id="size-choice-3-label">M</p>
+                      </label>
+
+                      <!--
+                        In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                        Active: "ring-2 ring-offset-2 ring-indigo-500"
+                        Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                      -->
+                      <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1 cursor-pointer focus:outline-none">
+                        <input type="radio" name="size-choice" value="L" class="sr-only" aria-labelledby="size-choice-4-label">
+                        <p id="size-choice-4-label">L</p>
+                      </label>
+
+                      <!--
+                        In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                        Active: "ring-2 ring-offset-2 ring-indigo-500"
+                        Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                      -->
+                      <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1 cursor-pointer focus:outline-none">
+                        <input type="radio" name="size-choice" value="XL" class="sr-only" aria-labelledby="size-choice-5-label">
+                        <p id="size-choice-5-label">XL</p>
+                      </label>
+
+                      <!--
+                        In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+                        Active: "ring-2 ring-offset-2 ring-indigo-500"
+                        Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+                      -->
+                      <label class="border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium uppercase sm:flex-1 opacity-25 cursor-not-allowed">
+                        <input type="radio" name="size-choice" value="XXL" disabled class="sr-only" aria-labelledby="size-choice-6-label">
+                        <p id="size-choice-6-label">XXL</p>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <button type="submit" class="mt-8 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Add to bag</button>
+
+                <p class="absolute top-4 left-4 text-center sm:static sm:mt-8">
+                  <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">View full details</a>
+                </p>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main> <section class="container mx-auto"> <h2 class="text-center text-xl">Code</h2> <br /> <button type="button" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" onclick="myFunction()" > Copy text </button> <br /><br /> <!-- <div class="blockcode"> --> <pre class="language-html prettyprint linenums"> <code class="lang-html container mx-auto font-serif leading-relaxed" id="code__of__page"> </code> </pre> <!-- </div> --> <script> let content = document.getElementById("main_part_of_page").innerHTML; content = "\n" + content.trim() + "\n"; document.getElementById("code__of__page").innerText = content; function myFunction() { const copyText = content; navigator.clipboard.writeText(copyText); document.querySelector("#custom__alert p").innerHTML = "&copy; Copied the text: " + copyText.length + " characters"; document.getElementById("custom__alert").style.display = "block"; setTimeout(() => { document.getElementById("custom__alert").style.display = "none"; }, 3000); } function myfunc2() { let x = document.getElementById("mobile-menu"); if (x.style.display === "none") { x.style.display = "block"; } else { x.style.display = "none"; } } </script> </section> <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script> </body> </html>

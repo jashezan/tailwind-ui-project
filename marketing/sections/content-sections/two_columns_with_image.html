@@ -1,0 +1,76 @@
+<!DOCTYPE html> <html lang="en" class="scroll-smooth"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <base href="https://shez4n.github.io/tailwind-ui-project/" /> <script src="https://cdn.tailwindcss.com"></script> <title>Tailwind UI Projects Website</title> <style> pre { color: #000; counter-reset: line; background-color: #fffffa; overflow: auto; padding: 0 1em; } code { line-height: 100%; counter-increment: line; background-color: rgb(255, 255, 255); padding: 0.2em; letter-spacing: -0.05em; word-break: normal; border-radius: 5px; } code:before { content: counter(line); padding-right: 1rem; } code:before { --webkit-user-select: none; } pre code { border: none; background: none; line-height: 1em; letter-spacing: normal; word-break: break-all; } #custom__alert { text-align: center; display: none; } #custom__alert p { width: 30%; } </style> </head> <body class="bg-gradient-to-r from-teal-500 via-cyan-500 to-sky-500"> <nav class="bg-gray-800"> <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8"> <div class="relative flex h-16 items-center justify-between"> <div class="absolute inset-y-0 left-0 flex items-center sm:hidden"> <!-- Mobile menu button--> <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-btn" onclick="myfunc2()" > <span class="sr-only">Open main menu</span> <!-- Icon when menu is closed. Heroicon name: outline/bars-3 Menu open: "hidden", Menu closed: "block" --> <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" > <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /> </svg> <!-- Icon when menu is open. Heroicon name: outline/x-mark Menu open: "block", Menu closed: "hidden" --> <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" > <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /> </svg> </button> </div> <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start" > <div class="flex flex-shrink-0 items-center"> <img class="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" /> <img class="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" /> </div> <div class="hidden sm:ml-6 sm:block"> <div class="flex space-x-4"> <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> <a class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page" href="./" >Home</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="./marketing/index.html" >Marketing</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="./ecommerce/index.html" >Ecommerce</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="./application-ui/index.html" >Application UI</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="./preview-img/index.html" >Preview Images</a > </div> </div> </div> <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0" > <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" > <span class="sr-only">View notifications</span> <!-- Heroicon name: outline/bell --> <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" > <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" /> </svg> </button> <!-- Profile dropdown --> <div class="relative ml-3"> <div> <button type="button" class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true" > <span class="sr-only">Open user menu</span> <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" /> </button> </div> </div> </div> </div> </div> <!-- Mobile menu, show/hide based on menu state. --> <div class="sm:hidden" id="mobile-menu"> <div class="space-y-1 px-2 pt-2 pb-3" id="mobile__menu__list"> <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> <a href="./" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page" >Dashboard</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="./marketing/index.html" >Marketing</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="./ecommerce/index.html" >Ecommerce</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="./application-ui/index.html" >Application UI</a > <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="./preview-img/index.html" >Preview Images</a > </div> </div> </nav> <br /> <div class="fixed top-20 right-0 left-0 flex items-center text-center text-white text-sm font-bold rounded mb-10" role="alert" id="custom__alert" > <p class="px-4 py-3 bg-green-600 mx-auto rounded"></p> </div> <h1 class="text-center text-xl">Main Content</h1> <!-- This example requires Tailwind CSS v2.0+ --> <main id="main_part_of_page" class="container bg-white mx-auto my-20 ring-2 ring-purple-500 ring-offset-4 ring-offset-slate-50 dark:ring-offset-slate-900 p-8" >
+<!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/typography'),
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+<div class="bg-white overflow-hidden">
+  <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <div class="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"></div>
+    <div class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
+      <div>
+        <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Case Study</h2>
+        <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Meet Whitney</h3>
+      </div>
+    </div>
+    <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+      <div class="relative lg:row-start-1 lg:col-start-2">
+        <svg class="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20" width="404" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true">
+          <defs>
+            <pattern id="de316486-4a29-4312-bdfc-fbce2132a2c1" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)" />
+        </svg>
+        <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
+          <figure>
+            <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
+              <img class="rounded-lg shadow-lg object-cover object-center" src="https://images.unsplash.com/photo-1546913199-55e06682967e?ixlib=rb-1.2.1&auto=format&fit=crop&crop=focalpoint&fp-x=.735&fp-y=.55&w=1184&h=1376&q=80" alt="Whitney leaning against a railing on a downtown street" width="1184" height="1376">
+            </div>
+            <figcaption class="mt-3 flex text-sm text-gray-500">
+              <!-- Heroicon name: solid/camera -->
+              <svg class="flex-none w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+              </svg>
+              <span class="ml-2">Photograph by Marcus O’Leary</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="mt-8 lg:mt-0">
+        <div class="text-base max-w-prose mx-auto lg:max-w-none">
+          <p class="text-lg text-gray-500">Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi.</p>
+        </div>
+        <div class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
+          <p>Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna.</p>
+          <p>Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique sit nisi lorem pulvinar. Urna, laoreet fusce nibh leo. Dictum et et et sit. Faucibus sed non gravida lectus dignissim imperdiet a.</p>
+          <p>Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem arcu, metus, egestas netus cursus. In.</p>
+          <ul role="list">
+            <li>Quis elit egestas venenatis mattis dignissim.</li>
+            <li>Cras cras lobortis vitae vivamus ultricies facilisis tempus.</li>
+            <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
+          </ul>
+          <p>Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra.</p>
+          <h3>How we helped</h3>
+          <p>Tincidunt integer commodo, cursus etiam aliquam neque, et. Consectetur pretium in volutpat, diam. Montes, magna cursus nulla feugiat dignissim id lobortis amet. Laoreet sem est phasellus eu proin massa, lectus. Diam rutrum posuere donec ultricies non morbi. Mi a platea auctor mi.</p>
+          <p>Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main> <section class="container mx-auto"> <h2 class="text-center text-xl">Code</h2> <br /> <button type="button" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" onclick="myFunction()" > Copy text </button> <br /><br /> <!-- <div class="blockcode"> --> <pre class="language-html prettyprint linenums"> <code class="lang-html container mx-auto font-serif leading-relaxed" id="code__of__page"> </code> </pre> <!-- </div> --> <script> let content = document.getElementById("main_part_of_page").innerHTML; content = "\n" + content.trim() + "\n"; document.getElementById("code__of__page").innerText = content; function myFunction() { const copyText = content; navigator.clipboard.writeText(copyText); document.querySelector("#custom__alert p").innerHTML = "&copy; Copied the text: " + copyText.length + " characters"; document.getElementById("custom__alert").style.display = "block"; setTimeout(() => { document.getElementById("custom__alert").style.display = "none"; }, 3000); } function myfunc2() { let x = document.getElementById("mobile-menu"); if (x.style.display === "none") { x.style.display = "block"; } else { x.style.display = "none"; } } </script> </section> <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script> </body> </html>

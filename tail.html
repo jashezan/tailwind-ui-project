@@ -1,0 +1,50 @@
+
+
+
+    </main>
+
+    <section class="container mx-auto">
+      <h2 class="text-center text-xl">Code</h2>
+      <br />
+      <button
+        type="button"
+        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        onclick="myFunction()"
+      >
+        Copy text
+      </button>
+      <br /><br />
+      <!-- <div class="blockcode"> -->
+      <pre class="language-html prettyprint linenums">
+<code class="lang-html container mx-auto font-serif leading-relaxed" id="code__of__page">
+</code>
+</pre>
+      <!-- </div> -->
+
+      <script>
+        let content = document.getElementById("main_part_of_page").innerHTML;
+        content = "\n" + content.trim() + "\n";
+        document.getElementById("code__of__page").innerText = content;
+        function myFunction() {
+          const copyText = content;
+          navigator.clipboard.writeText(copyText);
+          document.querySelector("#custom__alert p").innerHTML =
+            "&copy;  Copied the text: " + copyText.length + " characters";
+          document.getElementById("custom__alert").style.display = "block";
+          setTimeout(() => {
+            document.getElementById("custom__alert").style.display = "none";
+          }, 3000);
+        }
+        function myfunc2() {
+          let x = document.getElementById("mobile-menu");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+      </script>
+    </section>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  </body>
+</html>
