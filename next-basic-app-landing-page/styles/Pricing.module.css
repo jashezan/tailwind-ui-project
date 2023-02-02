@@ -1,0 +1,62 @@
+.title {
+  @apply text-3xl md:text-4xl font-medium text-center col-span-12;
+}
+
+.description {
+  @apply max-w-lg mx-auto text-center col-span-12 leading-relaxed mb-8;
+}
+
+.pricingWrapper {
+  @apply col-span-12 lg:col-span-10 lg:col-start-2 grid grid-cols-4 gap-4;
+}
+
+.cardTemplate {
+  @apply col-span-4 md:col-span-2 xl:col-span-1 p-6  rounded-lg border border-slate-200;
+}
+.card {
+  @apply cardTemplate bg-white;
+}
+
+.cardPopular {
+  @apply cardTemplate bg-emerald-500 text-white;
+}
+
+.titleSmall {
+  @apply font-bold capitalize;
+}
+
+.pricing {
+  @apply text-4xl py-8;
+}
+
+.pricingPM {
+  @apply text-slate-400 text-sm;
+}
+
+.pricingPmALT {
+  @apply text-white text-sm;
+}
+
+.people {
+  @apply text-slate-400;
+}
+
+.peopleAlt {
+  @apply text-white;
+}
+
+.list {
+  @apply leading-relaxed;
+}
+
+.list > li {
+  @apply pb-2 flex items-center;
+}
+
+.cta {
+  @apply px-4 py-3 border bg-white rounded border-slate-400 text-center w-full hover:border-none hover:text-white hover:bg-emerald-500;
+}
+
+.ctaAlt {
+  @apply px-4 py-3 bg-white text-gray-700 rounded text-center w-full hover:border-none hover:text-white hover:bg-emerald-300;
+}

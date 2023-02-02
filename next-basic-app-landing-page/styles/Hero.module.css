@@ -1,0 +1,19 @@
+.leftDiv {
+  @apply col-span-6 xl:place-self-center mb-8 mt-8 xl:mt-0 lg:mb-0;
+}
+
+.rightDiv {
+  @apply col-span-6 relative;
+}
+
+.heading {
+  @apply text-3xl md:text-4xl xl:text-5xl  font-medium text-center lg:text-left;
+}
+
+.content {
+  @apply my-8 max-w-lg mx-auto lg:mx-0 text-center lg:text-left;
+}
+
+.ctaContainer {
+  @apply flex flex-col lg:flex-row items-center;
+}

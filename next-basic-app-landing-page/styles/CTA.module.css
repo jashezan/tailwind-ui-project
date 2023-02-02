@@ -1,0 +1,14 @@
+.contentWrapper {
+  @apply lg:col-span-4 lg:col-start-2 col-span-12 md:col-span-6;
+}
+
+.contentWrapper > h3 {
+  @apply text-3xl lg:text-4xl font-medium mb-4 text-slate-100;
+}
+.contentWrapper > p {
+  @apply opacity-70 text-slate-100;
+}
+
+.linkWrapper {
+  @apply md:col-span-6 col-span-12 flex self-center items-center md:justify-self-end;
+}

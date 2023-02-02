@@ -1,0 +1,31 @@
+.header {
+  @apply z-50 left-0 right-0 text-neutral-50 absolute top-0 w-full ;
+}
+
+.header > div {
+  @apply mx-auto container p-4 grid lg:flex lg:justify-between grid-cols-2 items-center;
+}
+
+.nav {
+  @apply flex items-center;
+}
+
+.nav > ul {
+  @apply lg:flex hidden;
+}
+
+.nav > ul li {
+  @apply mr-8;
+}
+
+.nav > ul li > a {
+  @apply font-medium hover:text-neutral-50;
+}
+
+.action {
+  @apply hidden lg:block;
+}
+
+.action > button {
+  @apply px-4 py-3 bg-neutral-50 bg-opacity-40 hover:cursor-pointer text-neutral-50 font-medium rounded-lg;
+}

@@ -1,0 +1,27 @@
+.mobileBtn {
+  @apply lg:hidden justify-self-end inline-flex items-center justify-center rounded-md bg-neutral-50 p-2  hover:text-neutral-50 focus:outline-none;
+}
+
+.menu {
+  @apply col-span-2 bg-neutral-50 text-neutral-700 p-2 mt-4 rounded-lg shadow-lg  z-50;
+}
+
+.menu > ul {
+  @apply w-full py-2;
+}
+
+.menu > ul li {
+  @apply hover:bg-neutral-400 focus:bg-neutral-400 hover:text-neutral-50 focus:text-neutral-50 p-2 rounded;
+}
+
+.menu > ul li > a {
+  @apply font-medium hover:text-neutral-900;
+}
+
+.menu > div {
+  @apply border-t border-neutral-400 pt-4;
+}
+
+.menu div button {
+  @apply w-full px-4 py-3 bg-cyan-500 hover:cursor-pointer text-neutral-50 font-medium rounded-lg;
+}

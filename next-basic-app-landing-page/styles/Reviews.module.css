@@ -1,0 +1,31 @@
+.title {
+  @apply text-3xl md:text-4xl font-medium text-center col-span-12;
+}
+
+.description {
+  @apply max-w-lg mx-auto text-center col-span-12 leading-relaxed mb-8;
+}
+
+.reviewsWrapper {
+  @apply col-span-12 flex items-center ;
+}
+
+.reviewCard {
+  @apply border border-slate-200 min-w-[350px] mr-4 rounded-lg xl:col-span-3 md:col-span-6 col-span-12 p-8 text-center lg:text-left;
+}
+
+.starRatingWrapper {
+  @apply flex items-center justify-center lg:justify-start;
+}
+
+.name > small {
+  @apply text-sm text-gray-400 leading-tight;
+}
+
+.name {
+  @apply text-lg leading-tight;
+}
+
+.reviewCardContentWrapper {
+  @apply flex items-center justify-center lg:justify-start;
+}

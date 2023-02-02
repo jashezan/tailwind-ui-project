@@ -1,0 +1,43 @@
+.imageWrapper {
+  @apply col-span-6 relative;
+}
+
+.contentWrapper {
+  @apply col-span-6 xl:place-self-center mb-8 mt-8 xl:mt-0 lg:mb-0;
+}
+
+.featureBImageWrapper {
+  @apply col-span-6 relative grid grid-cols-12  gap-4;
+}
+
+.title {
+  @apply text-3xl xl:text-4xl font-medium text-center lg:text-left;
+}
+
+.content {
+  @apply my-8 max-w-lg mx-auto lg:mx-0 text-center lg:text-left;
+}
+
+.statsWrapper {
+  @apply flex flex-col lg:flex-row items-center mb-4 border-t py-8;
+}
+
+.stat {
+  @apply text-4xl font-bold mr-4;
+}
+
+.statsContent {
+  @apply text-sm;
+}
+
+.cardA {
+  @apply z-10 bg-white p-4 rounded-lg shadow-xl xl:col-start-4 col-span-12 sm:col-span-6 row-span-4 relative;
+}
+
+.cardB {
+  @apply z-10 bg-white p-4 rounded-lg shadow-xl xl:col-start-10 col-span-12 sm:col-span-6 row-span-3 row-start-3 relative;
+}
+
+.cardC {
+  @apply hidden xl:block z-10 bg-white p-4 rounded-lg shadow-xl col-start-5 col-span-5 row-span-3 row-start-5 relative;
+}

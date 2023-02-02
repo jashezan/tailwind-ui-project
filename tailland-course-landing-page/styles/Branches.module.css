@@ -1,0 +1,26 @@
+.branches {
+  @apply py-16 px-4 md:px-8 overflow-hidden 2xl:px-60 mx-auto grid  gap-8 grid-cols-12 relative;
+}
+.branches h3 {
+  @apply col-span-12 text-center mb-4;
+}
+
+.branches > p {
+  @apply opacity-70 text-center col-span-12 max-w-md mx-auto mb-8;
+}
+
+.branches > div {
+  @apply col-span-10 max-w-3xl mx-auto col-start-2 overflow-hidden  bg-amber-400 rounded-xl text-neutral-700 p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.branches a {
+  @apply col-span-12 text-center font-medium;
+}
+
+.branches h4 {
+  @apply mb-4 text-lg font-bold;
+}
+
+.branches p {
+  @apply text-sm;
+}

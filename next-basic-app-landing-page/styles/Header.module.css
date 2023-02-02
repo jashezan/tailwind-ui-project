@@ -1,0 +1,39 @@
+.header {
+  @apply p-4 lg:py-2 lg:px-0 container mx-auto grid lg:flex lg:justify-between grid-cols-2 text-slate-700;
+}
+
+.header > nav {
+  @apply flex items-center;
+}
+
+.navCTA {
+  @apply hidden lg:block;
+}
+
+.navMenu {
+  @apply lg:flex hidden;
+}
+
+.navMenu > li {
+  @apply mr-8;
+}
+
+.mobileMenuWrapper {
+  @apply col-span-2 bg-slate-50 p-2 mt-4 rounded shadow-lg;
+}
+
+.mobileHeaderCTA {
+  @apply border-t border-gray-400 pt-4;
+}
+
+.mobileNav {
+  @apply w-full py-2;
+}
+
+.mobileNav > li {
+  @apply hover:bg-slate-400 focus:bg-slate-400 hover:text-white focus:text-white p-2 rounded;
+}
+
+.mobileNavBTN {
+  @apply lg:hidden self-center place-self-end inline-flex items-center justify-center rounded-md bg-gray-50 p-2 hover:bg-gray-400 hover:text-white focus:outline-none;
+}

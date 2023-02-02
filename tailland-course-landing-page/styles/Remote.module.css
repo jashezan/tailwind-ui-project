@@ -1,0 +1,19 @@
+.remote {
+  @apply bg-[url('/remote.webp')] bg-cover bg-no-repeat bg-center relative py-40 px-4 md:px-8 2xl:px-60 lg:flex items-center justify-between text-neutral-50 bg-cyan-600;
+}
+
+.remote div {
+  @apply lg:max-w-2xl;
+}
+
+.remote div h3 {
+  @apply text-5xl font-bold text-center lg:text-left col-span-12 mb-8;
+}
+
+.remote div p {
+  @apply opacity-70 text-center lg:text-left max-w-md mx-auto lg:mx-0;
+}
+
+.remote div button {
+  @apply  px-4 py-3 bg-cyan-600 hover:cursor-pointer text-neutral-50 font-medium rounded-lg w-full lg:w-max mt-8;
+}

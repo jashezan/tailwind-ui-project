@@ -1,0 +1,19 @@
+.cta {
+  @apply relative py-16 px-4 md:px-8 2xl:px-60 lg:flex items-center justify-between text-neutral-50 bg-cyan-600;
+}
+
+.cta div {
+  @apply lg:max-w-lg;
+}
+
+.cta button {
+  @apply px-4 py-3 bg-neutral-50 hover:cursor-pointer text-cyan-600 font-medium rounded-lg w-full lg:w-max mt-8 lg:mt-0;
+}
+
+.cta div h3 {
+  @apply text-center lg:text-left col-span-12 mb-8;
+}
+
+.cta div p {
+  @apply opacity-70 text-center lg:text-left max-w-md mx-auto lg:mx-0;
+}

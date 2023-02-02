@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .ghostBTN {
+    @apply mx-1 hover:underline p-4;
+  }
+
+  .primaryBTN {
+    @apply focus:outline-emerald-800 focus:outline-1 px-4 py-3 bg-emerald-500 hover:bg-emerald-600 hover:cursor-pointer text-white font-medium rounded w-full lg:w-max;
+  }
+
+  .secondaryBTN {
+    @apply focus:outline-gray-800 focus:outline-1 px-4 py-3 border border-slate-200 hover:cursor-pointer font-medium rounded inline-flex items-center justify-center w-full lg:w-max;
+  }
+
+  .section {
+    @apply py-8 px-4 md:px-8 lg:py-16 2xl:py-40 2xl:px-60 mx-auto grid grid-cols-1 gap-8 lg:grid-cols-12 relative overflow-hidden;
+  }
+
+  .appBlurImage {
+    @apply hidden xl:block absolute z-0 right-[9px] top-[13px];
+  }
+}
+
+@layer base {
+  a {
+    @apply font-medium hover:text-slate-900;
+  }
+
+  html {
+    @apply text-slate-600;
+  }
+
+  * {
+    @apply focus:outline-1 focus:outline-emerald-800;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-slate-700;
+  }
+
+  body {
+    @apply bg-slate-50;
+  }
+}

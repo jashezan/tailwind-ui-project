@@ -1,0 +1,31 @@
+.footer {
+  @apply py-8 px-4 md:px-8 lg:py-16 2xl:px-60 mx-auto relative;
+}
+
+.footer > div:first-child {
+  @apply grid grid-cols-12 gap-8 text-slate-500 py-16;
+}
+
+.footer > div:last-child {
+  @apply flex items-center flex-col lg:flex-row text-gray-400;
+}
+
+.footerLinks {
+  @apply mb-2 lg:mb-0 text-center lg:text-left mr-6;
+}
+
+.footerCopyright {
+  @apply text-center lg:text-left lg:ml-auto;
+}
+
+.linksWrapper {
+  @apply col-span-6 xl:col-span-3;
+}
+
+.linksWrapper > h4 {
+  @apply font-medium text-xl mb-6 text-slate-800;
+}
+
+.linksWrapper > ul > li {
+  @apply py-3;
+}

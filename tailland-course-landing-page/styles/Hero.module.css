@@ -1,0 +1,27 @@
+.hero {
+  @apply z-40  text-neutral-50 py-16 px-4 md:px-8 overflow-hidden 2xl:px-60 mx-auto grid  gap-8 grid-cols-12 relative !pb-0 bg-gradient-to-r from-cyan-700 to-cyan-500 min-h-screen;
+}
+
+.hero div:nth-child(2) {
+  @apply col-span-12 lg:col-span-6 xl:place-self-center mb-8 mt-8 xl:mt-0 lg:mb-0 z-50 place-self-center;
+}
+
+.hero div:nth-child(3) {
+  @apply col-span-12 lg:col-span-6 relative z-50 place-self-end;
+}
+
+.title {
+  @apply text-center lg:text-left;
+}
+
+.desc {
+  @apply my-8 max-w-lg mx-auto lg:mx-0 text-center lg:text-left opacity-70;
+}
+
+.cta {
+  @apply flex flex-col lg:flex-row items-center;
+}
+
+.cta > button {
+  @apply w-full lg:w-max px-4 py-3 bg-neutral-50 hover:cursor-pointer text-cyan-600 font-bold rounded-lg lg:mr-8 mb-4 lg:mb-0;
+}

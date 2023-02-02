@@ -1,0 +1,23 @@
+.footer {
+  @apply py-16 px-4 md:px-8 overflow-hidden 2xl:px-60 mx-auto grid  gap-8 grid-cols-12 relative;
+}
+
+.footerCol {
+  @apply col-span-12 text-center lg:text-left max-w-lg mx-auto lg:col-span-3;
+}
+
+.footerCol p {
+  @apply font-bold mb-8;
+}
+
+.footerCol ul li {
+  @apply py-2;
+}
+
+.left {
+  @apply col-span-12 lg:col-span-3 mb-4 lg:mb-0;
+}
+
+div.left small {
+  @apply my-8 block text-center lg:text-left max-w-lg mx-auto;
+}

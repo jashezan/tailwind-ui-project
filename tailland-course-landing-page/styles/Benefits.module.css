@@ -1,0 +1,15 @@
+.benefits {
+  @apply py-16 px-4 md:px-8 overflow-hidden 2xl:px-60 mx-auto grid  gap-8 grid-cols-12 relative py-24;
+}
+
+.benefits > h2 {
+  @apply col-span-12 text-center mb-8;
+}
+
+.benefits div {
+  @apply col-span-12 md:col-span-6 md:w-max xl:col-span-3 flex flex-col md:flex-row items-center max-w-sm mx-auto w-full;
+}
+
+.benefits div > p {
+  @apply md:ml-4 text-center md:text-left mt-4 md:mt-0;
+}

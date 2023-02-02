@@ -1,0 +1,31 @@
+.features {
+  @apply py-16 px-4 md:px-8 overflow-hidden 2xl:px-60 mx-auto grid  gap-8 grid-cols-12 relative place-items-center;
+}
+
+.features div:first-child {
+  @apply lg:col-span-6 relative col-span-12 px-8;
+}
+
+.features div:last-child {
+  @apply lg:col-span-6 col-span-12 py-16 lg:py-0;
+}
+
+.features div:last-child > h2 {
+  @apply text-center lg:text-left;
+}
+
+.features div:last-child > p {
+  @apply my-8 max-w-md font-medium mx-auto lg:mx-0 text-center lg:text-left;
+}
+
+.features div:last-child > p:last-child {
+  @apply my-8 max-w-md font-light mx-auto lg:mx-0 text-center lg:text-left;
+}
+
+.imageWrapper {
+  @apply relative w-full mx-auto px-2;
+}
+
+.imageWrapper div {
+  @apply relative rounded-3xl w-[320px] md:w-[420px] h-[500px] md:h-[630px] overflow-hidden;
+}
